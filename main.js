@@ -27,3 +27,15 @@ function mostrarResultado(){
     getDolarOficial(importe)
     getDolarBlue(importe)
 }   
+
+function validarDatos(){
+    if (!isNaN(parseInt(document.getElementById('monto').value))) {
+        document.getElementById("mensajeError").innerHTML = ""
+        mostrarResultado();
+        
+    }else{
+        document.getElementById("mensajeError").innerHTML = "error / ingrese valor"
+    }
+
+}
+
